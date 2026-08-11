@@ -1,0 +1,41 @@
+{
+  "name": "omp-permission-suite",
+  "version": "0.2.3",
+  "description": "Four approval modes + command-level security restrictions for the Oh My Pi coding agent. Act / Auto / Ask / Plan mode switching, rule engine, subagent auto-approval.",
+  "keywords": [
+    "omp-plugin",
+    "omp-extension",
+    "omp-permission-suite",
+    "approval",
+    "security"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "index.ts",
+  "omp": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@oh-my-pi/pi-coding-agent": "*"
+  },
+  "dependencies": {
+    "tree-sitter-bash": "^0.25.1",
+    "web-tree-sitter": "^0.26.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eddie0521/omp-permission-suite.git"
+  },
+  "homepage": "https://github.com/Eddie0521/omp-permission-suite#readme",
+  "bugs": {
+    "url": "https://github.com/Eddie0521/omp-permission-suite/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.0"
+  },
+  "allowScripts": {
+    "tree-sitter-bash@0.25.1": true
+  }
+}
