@@ -14,18 +14,14 @@ import { autoApprove } from "./approver.ts";
 
 // ─── Mode configuration ────────────────────────────────────────────
 
-// Read-only tool surface available in Ask/Plan. These are omp's genuinely
-// read/investigate tools; enforcement is driven by the rule engine's allow
-// layer (see path-utils READONLY_TOOLS and rules HARD_ALLOW), which must stay
-// in sync with this list.
-const RO = ["read", "grep", "glob", "web_search", "ask", "task", "todo", "recall", "reflect", "set_approval_mode", "hypa_read", "hypa_search", "hypa_code", "hypa_compress", "hypa_session"];
-const ALL = [...RO, "bash", "hypa_shell", "eval", "edit", "write"];
-
-const MODE: Record<ApprovalMode, { tools: string[]; desc: string; icon: string }> = {
-  ask:  { tools: RO, desc: "Read-only Q&A", icon: "❓" },
-  auto: { tools: ALL, desc: "Subagent approval", icon: "🤖" },
-  act:  { tools: ALL, desc: "Full permissions", icon: "⚡" },
-  plan: { tools: RO, desc: "Read-only planning", icon: "📋" },
+// Enforcement of Ask/Plan read-only access is driven entirely by the rule
+// engine's allow layer (path-utils READONLY_TOOLS + rules HARD_ALLOW), not by
+// this table — MODE only carries the label and icon shown in the status line.
+const MODE: Record<ApprovalMode, { desc: string; icon: string }> = {
+  ask:  { desc: "Read-only Q&A", icon: "❓" },
+  auto: { desc: "Subagent approval", icon: "🤖" },
+  act:  { desc: "Full permissions", icon: "⚡" },
+  plan: { desc: "Read-only planning", icon: "📋" },
 };
 
 const ORDER: ApprovalMode[] = ["act", "auto", "ask", "plan"];

@@ -1,5 +1,5 @@
 /**
- * Pi Permission Suite — Auto Approver
+ * Oh My Pi Permission Suite — Auto Approver
  *
  * Self-contained auto-approval with no dependency on external subagent extensions.
  * Low-confidence decisions escalate to a human.

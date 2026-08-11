@@ -1,5 +1,5 @@
 /**
- * Pi Permission Suite — Rule Engine (upgraded)
+ * Oh My Pi Permission Suite — Rule Engine (upgraded)
  *
  * Priority: deny > allow > session always rules > mode default behavior
  *
