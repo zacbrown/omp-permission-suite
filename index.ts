@@ -2,7 +2,7 @@
  * Oh My Pi Permission Suite Extension
  *
  * Modes: Act / Auto / Ask / Plan
- * Shortcut: Alt+Shift+A (cycles modes)
+ * Shortcut: Ctrl+Y (cycles modes)
  * Command: /approval-mode
  * Tool: set_approval_mode (callable by the agent)
  */
@@ -111,7 +111,7 @@ Available modes:
 // ─── Shortcut registration ─────────────────────────────────────────
 
 function registerApprovalShortcut(pi: ExtensionAPI, state: SuiteState): void {
-  pi.registerShortcut("alt+shift+a", {
+  pi.registerShortcut("ctrl+y", {
     description: "Cycle through approval modes",
     handler: (ctx) => {
       const next = ORDER[(ORDER.indexOf(state.mode) + 1) % ORDER.length];
