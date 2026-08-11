@@ -157,7 +157,7 @@ async function handleToolCall(
   if (state.mode === "auto") {
     if (result === "allow") { state.stats.approved++; return undefined; }
 
-    ctx.ui.setStatus("pi-permission-suite", ctx.ui.theme.fg("warning", "🤖 Approving..."));
+    ctx.ui.setStatus("omp-permission-suite", ctx.ui.theme.fg("warning", "🤖 Approving..."));
     const decision = await autoApprove(ctx, toolName, inp);
 
     if (decision.approved) {
