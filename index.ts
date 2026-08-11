@@ -72,7 +72,6 @@ function registerApprovalModeCommand(pi: ExtensionAPI, state: SuiteState): void 
         const ch = await ctx.ui.select("Mode:", ORDER.map((m) => ({ label: `${cfg(m).icon} ${m.toUpperCase()} — ${cfg(m).desc}`, value: m })));
         if (ch) apply(state, ch, pi); else return;
       }
-      ctx.ui.notify(`${cfg(state.mode).icon} ${state.mode.toUpperCase()}`, "info");
       updateStatus(state, ctx);
     },
   });
@@ -99,7 +98,6 @@ Available modes:
       const m = params.mode as ApprovalMode;
       const prev = state.mode;
       apply(state, m, pi);
-      ctx.ui.notify(`${cfg(m).icon} ${m.toUpperCase()} — ${cfg(m).desc}`, "info");
       updateStatus(state, ctx);
       return {
         content: [{ type: "text" as const, text: `Switched from ${prev} to ${m} mode. ${cfg(m).desc}` }],
@@ -116,7 +114,6 @@ function registerApprovalShortcut(pi: ExtensionAPI, state: SuiteState): void {
     handler: (ctx) => {
       const next = ORDER[(ORDER.indexOf(state.mode) + 1) % ORDER.length];
       apply(state, next, pi);
-      ctx.ui.notify(`${cfg(next).icon} ${next.toUpperCase()}`, "info");
       updateStatus(state, ctx);
     },
   });
