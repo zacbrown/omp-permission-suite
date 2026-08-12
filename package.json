@@ -26,11 +26,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eddie0521/omp-permission-suite.git"
+    "url": "git+https://github.com/zacbrown/omp-permission-suite.git"
   },
-  "homepage": "https://github.com/Eddie0521/omp-permission-suite#readme",
+  "homepage": "https://github.com/zacbrown/omp-permission-suite#readme",
   "bugs": {
-    "url": "https://github.com/Eddie0521/omp-permission-suite/issues"
+    "url": "https://github.com/zacbrown/omp-permission-suite/issues"
   },
   "devDependencies": {
     "@types/node": "^22.20.0"
